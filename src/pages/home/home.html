@@ -5,12 +5,30 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-header>
-      CHARTS
+  <ion-card *ngFor="let id of [1,2]">
+    <ion-card-header text-center>
+      Freezer #{{id}}
     </ion-card-header>
+    <hr>
     <ion-card-content>
-      <canvas #barCanvas></canvas>
+      <h4>Temperature</h4>
+      <canvas #barCanvas [id]="id"></canvas>
+
+      <ion-item>
+        <ion-icon name="ios-arrow-up"
+                  item-left
+                  large></ion-icon>
+        <h2>Maximum</h2>
+        <p>2 ºC</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pulse"
+                  item-left
+                  large></ion-icon>
+        <h2>Status</h2>
+        <p class="online">ONLINE</p>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
