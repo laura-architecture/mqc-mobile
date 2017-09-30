@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-row>
+      <ion-col>
+        <ion-title style="padding:.7em">Logs</ion-title>
+      </ion-col>
+      <ion-col>
+        <button ion-button
+                color="danger"
+                outline
+                style="float:right"
+                (click)="exitApp()">CLOSE APP</button>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-buttons end>
+        <button ion-button
+                color="primary"
+                outline
+                (click)="findLocation()">
+        Refresh
+      </button>
+      </ion-buttons>
+      <hr>
+      <pre>
+        <p *ngIf="log.length ===0">No entries yet.</p>
+        <p *ngFor="let entry of log" text-wrap>{{entry}}</p>
+      </pre>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
