@@ -1,5 +1,5 @@
-import { Component, NgZone, ViewChild, ElementRef } from '@angular/core'
-import { IonicPage, NavController, Platform } from 'ionic-angular'
+import { Component, NgZone } from '@angular/core'
+import {  NavController, Platform } from 'ionic-angular'
 import {
   BackgroundGeolocation,
   BackgroundGeolocationConfig,
@@ -15,7 +15,6 @@ class Location {
   public timestamp: number
 }
 
-@IonicPage()
 @Component({
   selector: 'page-log',
   templateUrl: 'log.html'
